@@ -109,7 +109,23 @@ module.exports = {
             /*{from : 'node_modules/primeui/**',
              to:'../../'},*/
         ]),
+
+        /* Исправляет Warning:
+         * WARNING in .//~/@angular/core/src/linker/system_js_ng_module_factory_loader.js
+         * https://github.com/AngularClass/angular2-webpack-starter/issues/993
+         * https://webpack.github.io/docs/configuration.html#automatically-created-contexts-defaults-module-xxxcontextxxx
+         * https://github.com/angular/angular/issues/11580
+         * */
+        new webpack.ContextReplacementPlugin(
+            // The (\\|\/) piece accounts for path separators in *nix and Windows
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            root('./src') // location of your src
+        ),
     ],
+}
+
+function root(__path) {
+    return path.join(__dirname, __path);
 }
 
 //красивое уведомление.
