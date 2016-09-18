@@ -12,18 +12,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by Алексей on 18.09.2016.
  */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var LayoutComponent = (function () {
+    function LayoutComponent() {
     }
-    AppComponent = __decorate([
+    LayoutComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            /*template: '<h1>My First Angular 2 App</h1>'*/
-            template: "\n<my-layout>Loading Layout...</my-layout>\n<div style=\"display: inline-flex;width: 100%;\">\n    <my-left>Loading Left...</my-left>\n    <my-main>Loading Main...</my-main>    \n</div>\n"
+            selector: 'my-layout',
+            template: '<div style="width: 100%; height: 100px; border: 1px solid black">top layout</div>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], LayoutComponent);
+    return LayoutComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.LayoutComponent = LayoutComponent;
+//# sourceMappingURL=app.component.layout.js.map

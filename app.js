@@ -62,7 +62,7 @@ var app =
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 277);
+/******/ 	return __webpack_require__(__webpack_require__.s = 281);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -19023,12 +19023,12 @@ function sanitizeSrcset(srcset) {
 
 "use strict";
 "use strict";
-var isArray_1 = __webpack_require__(272);
-var isObject_1 = __webpack_require__(273);
+var isArray_1 = __webpack_require__(273);
+var isObject_1 = __webpack_require__(274);
 var isFunction_1 = __webpack_require__(173);
-var tryCatch_1 = __webpack_require__(275);
+var tryCatch_1 = __webpack_require__(276);
 var errorObject_1 = __webpack_require__(172);
-var UnsubscriptionError_1 = __webpack_require__(271);
+var UnsubscriptionError_1 = __webpack_require__(272);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -30914,8 +30914,8 @@ var SafeResourceUrlImpl = (function (_super) {
 "use strict";
 "use strict";
 var root_1 = __webpack_require__(95);
-var toSubscriber_1 = __webpack_require__(274);
-var observable_1 = __webpack_require__(269);
+var toSubscriber_1 = __webpack_require__(275);
+var observable_1 = __webpack_require__(270);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
  * of RxJS.
@@ -31067,8 +31067,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(169);
 var Subscriber_1 = __webpack_require__(171);
 var Subscription_1 = __webpack_require__(93);
-var ObjectUnsubscribedError_1 = __webpack_require__(270);
-var SubjectSubscription_1 = __webpack_require__(268);
+var ObjectUnsubscribedError_1 = __webpack_require__(271);
+var SubjectSubscription_1 = __webpack_require__(269);
 var rxSubscriber_1 = __webpack_require__(94);
 /**
  * @class SubjectSubscriber<T>
@@ -31232,7 +31232,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var isFunction_1 = __webpack_require__(173);
 var Subscription_1 = __webpack_require__(93);
-var Observer_1 = __webpack_require__(267);
+var Observer_1 = __webpack_require__(268);
 var rxSubscriber_1 = __webpack_require__(94);
 /**
  * Implements the {@link Observer} interface and extends the
@@ -31550,14 +31550,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = __webpack_require__(0);
 var platform_browser_1 = __webpack_require__(158);
-var app_component_1 = __webpack_require__(276);
+var app_component_1 = __webpack_require__(280);
+var app_component_layout_1 = __webpack_require__(277);
+var app_component_left_1 = __webpack_require__(278);
+var app_component_main_1 = __webpack_require__(279);
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            declarations: [app_component_1.AppComponent, app_component_layout_1.LayoutComponent, app_component_left_1.LeftComponent, app_component_main_1.MainComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
@@ -42174,6 +42177,12 @@ function sanitizeStyle(value) {
 /* 267 */
 /***/ function(module, exports) {
 
+module.exports = "<div style=\"width: 20%;border: 1px solid black;\">left, menu111</div>"
+
+/***/ },
+/* 268 */
+/***/ function(module, exports) {
+
 "use strict";
 "use strict";
 exports.empty = {
@@ -42185,7 +42194,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 268 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42231,7 +42240,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 269 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42259,7 +42268,7 @@ exports.$$observable = getSymbolObservable(root_1.root);
 //# sourceMappingURL=observable.js.map
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -42292,7 +42301,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -42323,7 +42332,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -42332,7 +42341,7 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 //# sourceMappingURL=isArray.js.map
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -42344,7 +42353,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42369,7 +42378,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 275 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42394,7 +42403,109 @@ exports.tryCatch = tryCatch;
 //# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-/* 276 */
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by Алексей on 18.09.2016.
+ */
+var core_1 = __webpack_require__(0);
+var LayoutComponent = (function () {
+    function LayoutComponent() {
+    }
+    LayoutComponent = __decorate([
+        core_1.Component({
+            selector: 'my-layout',
+            template: '<div style="width: 100%; height: 100px; border: 1px solid black">top layout</div>'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], LayoutComponent);
+    return LayoutComponent;
+}());
+exports.LayoutComponent = LayoutComponent;
+
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by Алексей on 18.09.2016.
+ */
+var core_1 = __webpack_require__(0);
+var LeftComponent = (function () {
+    function LeftComponent() {
+    }
+    LeftComponent = __decorate([
+        core_1.Component({
+            selector: 'my-left',
+            template: __webpack_require__(267),
+        }), 
+        __metadata('design:paramtypes', [])
+    ], LeftComponent);
+    return LeftComponent;
+}());
+exports.LeftComponent = LeftComponent;
+
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by Алексей on 18.09.2016.
+ */
+var core_1 = __webpack_require__(0);
+var MainComponent = (function () {
+    function MainComponent() {
+    }
+    MainComponent = __decorate([
+        core_1.Component({
+            selector: 'my-main',
+            template: '<div style="width: 80%;border: 1px solid black;">right, main window</div>'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MainComponent);
+    return MainComponent;
+}());
+exports.MainComponent = MainComponent;
+
+
+/***/ },
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42418,7 +42529,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            /*template: '<h1>My First Angular 2 App</h1>'*/
+            template: "\n<my-layout>Loading Layout...</my-layout>\n<div style=\"display: inline-flex;width: 100%;\">\n    <my-left>Loading Left...</my-left>\n    <my-main>Loading Main...</my-main>    \n</div>\n"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -42428,7 +42540,7 @@ exports.AppComponent = AppComponent;
 
 
 /***/ },
-/* 277 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
