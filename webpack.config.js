@@ -18,7 +18,7 @@ var WebpackDevServer = require("webpack-dev-server");
 const NODE_ENV = process.env.NODE_ENV|| 'development';
 
 module.exports = {
-    debug: true,
+    // debug: true,
     context: __dirname + '/',
     entry: {
         app: './app/main.ts'
