@@ -20,7 +20,7 @@ import { Book } from "./Models/Book";
 })
 export class MainComponent {
     errorMessage: string;
-    books: Book[];
+    books: Book[] = [];
 
     constructor(private _appService: AppService) { }
 
@@ -28,9 +28,6 @@ export class MainComponent {
 
     getDataBooks() {
         this._appService.getBooks()
-            .subscribe(
-                data => this.books = data,
-                error => this.errorMessage = <any>error
-            );
+            .then(data => this.books = data);
     }
 }

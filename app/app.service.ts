@@ -10,10 +10,10 @@ import {Book} from "./Models/Book";
 export class AppService {
     constructor(private _http: Http) { }
 
-    getBooks() {
+    getBooks(): Promise<Book[]> {
         return this._http.get('app/TestData/books.json')
-            .map((response: Response) => <Book[]>response.json().data)
-            .do(data => console.log(data))
+            .toPromise()
+            .then(response => response.json().data as Book[])
             .catch(this.handleError);
     }
 
