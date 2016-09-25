@@ -24,10 +24,21 @@ export class MainComponent {
 
     constructor(private _appService: AppService) { }
 
-    ngOnInit() { this.getDataBooks(); }
+    ngOnInit() {
+        // this.getDataBooksPromise();
+        this.getDataBooksObservable();
+    }
 
-    getDataBooks() {
-        this._appService.getBooks()
+    getDataBooksPromise() {
+        this._appService.getBooksPromise()
             .then(data => this.books = data);
+    }
+
+    getDataBooksObservable() {
+        this._appService.getBooksObservable()
+            .subscribe(
+                data => this.books = data,
+                error => this.errorMessage = <any>error
+            );
     }
 }
